@@ -3,6 +3,7 @@ Kuberenetes Orchestration using Carvel VMWare
 # Prerequisite
 
 - Install a K8n cluster
+- k3d cluster create --config k3dcluster.yml
 
 # Initial Setup
 
@@ -37,6 +38,8 @@ Kuberenetes Orchestration using Carvel VMWare
 - Add package-template.yml
 
 ## Creating a Package Repository
+
+A package repository is a collection of packages and their metadata. Similar to a maven repository or a rpm repository, adding a package repository to a cluster gives users of that cluster the ability to install any of the packages from that repository.
 
 - mkdir -p my-pkg-repo/.imgpkg my-pkg-repo/packages/simple-app.corp.com
 - ytt -f package-template.yml --data-value-file openapi=schema-openapi.yml -v version="1.0.0" > my-pkg-repo/packages/simple-app.corp.com/1.0.0.yml

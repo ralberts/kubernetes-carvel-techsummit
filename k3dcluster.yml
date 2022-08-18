@@ -1,0 +1,17 @@
+# See all options here: https://k3d.io/usage/configfile/#all-options-example
+apiVersion: k3d.io/v1alpha2 # this will change in the future as we make everything more stable
+kind: Simple # internally, we also have a Cluster config, which is not yet available externally
+name: demo-cluster
+ports:
+  - port: 8081:443 # same as `--port '8080:80@loadbalancer'`
+    nodeFilters:
+      - loadbalancer
+registries: # define how registries should be created or used
+  create: true # creates a default registry to be used with the cluster; same as `--registry-create`
+  # use:
+  #   - k3d-myotherregistry:5000 # some other k3d-managed registry; same as `--registry-use 'k3d-myotherregistry:5000'`
+  # config: | # define contents of the `registries.yaml` file (or reference a file); same as `--registry-config /path/to/config.yaml`
+  #   mirrors:
+  #     "my.company.registry":
+  #       endpoint:
+  #         - http://my.company.registry:5000
