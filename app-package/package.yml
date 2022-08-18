@@ -16,11 +16,11 @@ spec:
     spec:
       fetch:
       - imgpkgBundle:
-          image: #@ "${REPO_HOST}/packages/simple-app:" + data.values.version
+          image: #@ data.values.repo_host + "/packages/simple-app:" + data.values.version
       template:
       - ytt:
           paths:
-          - "config/"
+          - "app/"
       - kbld:
           paths:
           - ".imgpkg/images.yml"
