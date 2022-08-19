@@ -3,11 +3,7 @@
 svc_port: 9000
 app_port: 9000
 
-postgres_host:
-postgres_url_scheduler:
-elastic_host:
-keycloak_clientsecret: ""
-email_password: ""
+db_config: ""
 
 base_registry: ""
 

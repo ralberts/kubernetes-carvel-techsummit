@@ -38,5 +38,4 @@ kind: ConfigMap
 metadata:
   name: simple-demo-config
 data:
-  KEYCLOAK_CLIENTSECRET: #@ data.values.keycloak_clientsecret
-  EMAIL_PASSWORD: #@ data.values.email_password
+  DB_CONFIG: #@ data.values.db_config

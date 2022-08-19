@@ -1,12 +1,5 @@
 #@ load("@ytt:data", "data")
 
-apiVersion: kbld.k14s.io/v1alpha1
-kind: Config
-sources:
-  - image: docker.io/moa/k8s-simple-demo
-    path: ../../simple-demo/
-
-#@ if/end data.values.push_images_repo:
 ---
 apiVersion: kbld.k14s.io/v1alpha1
 kind: Config
