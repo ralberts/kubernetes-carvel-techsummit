@@ -14,7 +14,7 @@ sources:
     #@ if data.values.base_registry:
     docker:
       build:
-        rawOptions: #@ ["--build-arg", "BASE_REGISTRY=" + data.values.base_registry, "--build-arg", "BASE_IMAGE=" + data.values.moa_scheduler_image, "--build-arg", "BASE_TAG=" + data.values.moa_scheduler_tag]
+        rawOptions: #@ ["--build-arg", "BASE_REGISTRY=" + data.values.base_registry, "--build-arg", "BASE_IMAGE=" + data.values.image, "--build-arg", "BASE_TAG=" + data.values.tag]
     #@ end
 destinations:
   - image: simple-demo

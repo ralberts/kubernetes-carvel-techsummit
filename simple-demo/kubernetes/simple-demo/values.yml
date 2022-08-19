@@ -4,7 +4,8 @@ svc_port: 9000
 app_port: 9000
 
 db_config: ""
-
+image: ""
+tag: ""
 base_registry: ""
 
 #! image repo to push image to.
