@@ -21,3 +21,6 @@ components:
           type: string
           description: Name used in hello message from app when app is pinged.
           default: stranger
+        repo_host:
+          type: string
+          default: localhost:60630

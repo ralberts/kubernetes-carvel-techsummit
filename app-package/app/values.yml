@@ -7,4 +7,4 @@ app_port: 80
 #@schema/desc "Name used in hello message from app when app is pinged."
 hello_msg: stranger
 
-repo_host: localhost:60630
+repo_host: 192.168.1.14:5001

@@ -65,3 +65,15 @@ With the bundle metadata files present, we can push our bundle to whatever OCI r
 
 - kapp deploy -a repo -f repo.yml -y
 - watch kubectl get packagerepository
+- kubectl get packagemetadatas
+- kubectl get package simple-app.corp.com.1.0.0 -o yaml
+
+## Installing a Package
+
+- kapp deploy -a default-ns-rbac -f https://raw.githubusercontent.com/vmware-tanzu/carvel-kapp-controller/develop/examples/rbac/default-ns.yml -y (one time give permissions)
+
+Install the package
+
+- kapp deploy -a pkg-demo -f package-install.yml -y
+- kubectl get pods
+- kubectl port-forward service/simple-app 3000:80

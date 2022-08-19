@@ -2,10 +2,10 @@
 apiVersion: imgpkg.carvel.dev/v1alpha1
 images:
 - annotations:
-    kbld.carvel.dev/id: localhost:60630/packages/simple-app:1.0.0
+    kbld.carvel.dev/id: 192.168.1.14:5001/packages/simple-app:1.0.0
     kbld.carvel.dev/origins: |
       - resolved:
           tag: 1.0.0
-          url: localhost:60630/packages/simple-app:1.0.0
-  image: localhost:60630/packages/simple-app@sha256:a25f9292ddd3e8a9acb95b306278ed12939bc1918dceae0db38d0a5fe922e48d
+          url: 192.168.1.14:5001/packages/simple-app:1.0.0
+  image: 192.168.1.14:5001/packages/simple-app@sha256:541ad106ae5d76d12f1204cd3ca3008f8448af09c9c0540ca326ddb17744f6b2
 kind: ImagesLock

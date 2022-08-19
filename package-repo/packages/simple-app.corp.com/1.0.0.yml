@@ -24,11 +24,14 @@ spec:
           type: string
           description: Name used in hello message from app when app is pinged.
           default: stranger
+        repo_host:
+          type: string
+          default: localhost:60630
   template:
     spec:
       fetch:
       - imgpkgBundle:
-          image: localhost:60630/packages/simple-app:1.0.0
+          image: 192.168.1.14:5001/packages/simple-app:1.0.0
       template:
       - ytt:
           paths:
