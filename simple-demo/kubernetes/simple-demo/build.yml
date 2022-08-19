@@ -3,6 +3,8 @@
 ---
 apiVersion: kbld.k14s.io/v1alpha1
 kind: Config
+metadata:
+  name: simple-demo-build-config
 sources:
   - image: simple-demo
     path: ../../simple-demo/
