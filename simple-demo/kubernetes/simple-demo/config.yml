@@ -39,3 +39,4 @@ metadata:
   name: simple-demo-config
 data:
   DB_CONFIG: #@ data.values.db_config
+  DB_URL: "new_url"

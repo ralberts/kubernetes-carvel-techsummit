@@ -4,8 +4,7 @@ ARG BASE_TAG=latest
 
 FROM golang:latest as BUILD
 WORKDIR /app
-COPY . .
-
+COPY go.mod main.go .
 RUN \
     go install && \
     go build -o bin/simple-demo -v .
