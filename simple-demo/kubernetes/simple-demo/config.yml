@@ -1,0 +1,42 @@
+#@ load("@ytt:data", "data")
+
+#@ def labels():
+simple-demo: ""
+#@ end
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-demo-service
+spec:
+  ports:
+    - port: #@ data.values.svc_port
+      targetPort: #@ data.values.app_port
+  selector: #@ labels()
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-demo
+spec:
+  selector:
+    matchLabels: #@ labels()
+  template:
+    metadata:
+      labels: #@ labels()
+    spec:
+      containers:
+        - name: simple-demo
+          image: simple-demo
+          envFrom:
+            - configMapRef:
+                name: simple-demo-config
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: simple-demo-config
+data:
+  KEYCLOAK_CLIENTSECRET: #@ data.values.keycloak_clientsecret
+  EMAIL_PASSWORD: #@ data.values.email_password
