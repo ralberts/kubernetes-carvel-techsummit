@@ -34,3 +34,8 @@ ytt -f simple-demo -f ../../values.yml | kbld -f - | kapp deploy -a simple-demo 
 - imgpkg pull -b ${REPO_HOST}/simple-demo:1.0.0 -o ../tmp/simple-demo
 
 - Push to kubernetes
+
+# YTT Library
+
+cd ytt-example
+ytt -f .
