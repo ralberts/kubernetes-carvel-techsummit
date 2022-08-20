@@ -38,7 +38,12 @@ ytt -f simple-demo -f ../../values.yml | kbld -f - | kapp deploy -a simple-demo 
 
 - Push to kubernetes
 
-# YTT Library
+## Make a change
+
+- ytt -f simple-demo -f ../../values.yml | kbld -f - >| final.yml
+- kapp deploy -a simple-demo -f final.yml -c
+
+# YTT Library Example
 
 cd ytt-example
 ytt -f .

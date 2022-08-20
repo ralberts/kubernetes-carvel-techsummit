@@ -1,5 +1,4 @@
 #@ load("@ytt:data", "data")
-
 ---
 apiVersion: kbld.k14s.io/v1alpha1
 kind: Config
@@ -8,7 +7,6 @@ metadata:
 sources:
   - image: simple-demo
     path: ../../simple-demo/
-    newImage: #@ data.values.registry_location + data.values.push_images_repo
     preresolved: true
     tags: [latest]
     #@ if data.values.base_registry:
