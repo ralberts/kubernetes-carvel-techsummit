@@ -20,6 +20,9 @@ kbld -f simple-demo
 ## Kapp
 
 kapp deploy -a simple-demo -f- -c -y
+kapp list
+kapp inspect -a simple-demo
+kapp logs -f -a simple-demo
 
 ## Chained
 
