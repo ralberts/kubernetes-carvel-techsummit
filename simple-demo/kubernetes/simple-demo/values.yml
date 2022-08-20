@@ -7,6 +7,6 @@ db_config: ""
 image: ""
 tag: ""
 base_registry: ""
-
+registry_location: ""
 #! image repo to push image to.
 push_images_repo: "/simple-demo"

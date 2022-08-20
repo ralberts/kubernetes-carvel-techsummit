@@ -1,4 +1,4 @@
 #@data/values
 ---
 #@overlay/match missing_ok=True
-registry_location: "k3d-demo-cluster-registry:60630"
+registry_location: "k3d-demo-cluster-registry:54802"
